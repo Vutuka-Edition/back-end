@@ -29,7 +29,7 @@ app.use((req, res, next) => {
 app.use("/api", mainRouter);
 
 app.use((req, res) => {
-  res.status(404).json({ message: "Route not found" });
+  res.status(404).json({ message: "Route is not found" });
 });
 
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
