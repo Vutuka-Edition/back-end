@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "dotenv -e .env.dev -- nodemon --exec ts-node src/index.ts",
-    "start": "dotenv -e .env.live -- node dist/index.js",
+    "dev": "dotenv -e .env.dev -- nodemon --exec ts-node src/server.ts",
+    "start": "dotenv -e .env.live -- node dist/server.js",
     "test": "dotenv -e .env.test -- jest --detectOpenHandles --passWithNoTests --coverage",
     "build": "tsc",
     "clean": "rimraf dist",
@@ -25,11 +25,19 @@
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
     "@types/morgan": "^1.9.10",
     "@types/node": "^24.1.0",
+    "@types/supertest": "^6.0.3",
     "@types/winston": "^2.4.4",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
     "dotenv-cli": "^9.0.0",
+    "eslint": "^9.31.0",
+    "jest": "^30.0.5",
     "nodemon": "^3.1.10",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
   }
