@@ -5,7 +5,7 @@ describe("Express App", () => {
   it("should return 404 for unknown route", async () => {
     const res = await request(app).get("/non-existent");
     expect(res.status).toBe(404);
-    expect(res.body.message).toBe("Route not found");
+    expect(res.body.message).toBe("Route is not found");
   });
 
   it("should handle /api route (mocked)", async () => {
